@@ -47,7 +47,7 @@ header nav .right ul li{
 header nav .right ul li a{
     text-decoration: none;
     color: white;
-    transition: all 0.4s ease-in-out;
+    transition: all 0.4s ease-in;
 }
 header nav .right ul li a::after{
     content: '';
@@ -63,10 +63,14 @@ header nav .right ul li a:hover::after{
 
 @media (max-width: 750px) {
     header nav .right{
-        height: 0;
+        height: 0px;
         flex-direction: column;
         transition: height 0.4s ease-in-out;
         overflow: hidden;
+        width: 100%;
+        position: absolute;
+        top: 60px;
+        left: 0;
     }
     header nav .left .menu{
         display: block;
@@ -85,5 +89,10 @@ header nav .right ul li a:hover::after{
     }
     .clicked .bars:nth-child(3){
         transform: rotate(45deg) translateY(-4px) translateX(-6px);
+    }
+    header nav .right ul{
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
     }
 }
